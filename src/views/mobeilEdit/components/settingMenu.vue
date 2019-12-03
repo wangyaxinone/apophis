@@ -5,7 +5,7 @@
             <el-tab-pane label="事件" name="second">事件</el-tab-pane>
             <el-tab-pane label="动画" name="third">动画</el-tab-pane>
             <el-tab-pane label="JS脚本" name="fourth">JS脚本</el-tab-pane>
-            <el-tab-pane label="页面设置" name="fourth">页面设置</el-tab-pane>
+            <el-tab-pane label="页面设置" name="five">页面设置</el-tab-pane>
         </el-tabs>
     </div>
 </template>
