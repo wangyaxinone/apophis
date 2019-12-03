@@ -2,7 +2,9 @@
     <div class="mobelEdit">
         <el-container>
             <el-header style="position:relative;z-index:2;">
-                <head-top></head-top>
+                <head-top>
+                    <headBtns></headBtns>
+                </head-top>
             </el-header>
             <el-container>
                 <el-aside width="65px">
@@ -23,6 +25,7 @@ import leftContail from './components/leftContail.vue';
 import componentsLib from './components/componentsLib.vue';
 import editContainer from './components/editContainer.vue';
 import settingMenu from './components/settingMenu.vue';
+import headBtns from './components/headBtns.vue';
 import {HeadTop} from '@/components';
 @Component({
     components: {
@@ -30,7 +33,8 @@ import {HeadTop} from '@/components';
         'head-top': HeadTop,
         componentsLib,
         settingMenu,
-        editContainer
+        editContainer,
+        headBtns
     }
 })
 export default class MobeilEdit extends Vue {
