@@ -6,11 +6,11 @@
         <div class="item">
             <slot></slot>
         </div>
-        <el-dropdown  class="item"  trigger="click">
+        <el-dropdown  class="item"  @command="clickHandle">
             <el-avatar class="avatar " size="medium " src="../assets/logo.png" style="cursor:pointer;"></el-avatar>
             <el-dropdown-menu slot="dropdown">
-                <el-dropdown-item>个人中心</el-dropdown-item>
-                <el-dropdown-item divided>退出</el-dropdown-item>
+                <el-dropdown-item command="center">个人中心</el-dropdown-item>
+                <el-dropdown-item command="logout" divided>退出</el-dropdown-item>
             </el-dropdown-menu>
         </el-dropdown>
     </div>
@@ -19,6 +19,14 @@
 import {Vue, Component} from 'vue-property-decorator';
 @Component
 export default class HeadTop extends Vue {
+    public clickHandle(data: any) {
+        console.log(data);
+        switch (data) {
+            case 'logout':
+                this.$router.push('/login');
+                break;
+        }
+    }
 }
 </script>
 <style lang="scss" scoped>

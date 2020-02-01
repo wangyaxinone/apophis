@@ -42,10 +42,18 @@ import {Vue, Component, Prop, Emit} from 'vue-property-decorator';
 @Component
 export default class HeadBtns extends Vue {
     public scaleValue: number = 1;
+    public canUndo: boolean = false;
+    public canRedo: boolean = false;
     @Prop({default: false}) public loading!: boolean;
     @Prop({default: 1}) public scale!: number;
     public created() {
         this.scaleValue = this.scale;
+    }
+    public editorUndo() {
+      console.log('uploadSuccessPsd');
+    }
+    public editorRedo() {
+      console.log('uploadSuccessPsd');
     }
     @Emit('update:scale')
     public updateScale(type: string, value: number) {
