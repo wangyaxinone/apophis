@@ -5,7 +5,7 @@
       <span class="scale-btn" @click="updateScale('reduce')">
         <i class="el-icon-zoom-out"></i>
       </span>
-      <span class="scale-input">{{parseFloat(scaleValue * 100).toFixed(0)}}%</span>
+      <span class="scale-input" @click="updateScale('reset')">{{parseFloat(scaleValue * 100).toFixed(0)}}%</span>
       <span class="scale-btn" @click="updateScale('plus')">
         <i class="el-icon-zoom-in"></i>
       </span>
@@ -70,7 +70,7 @@ export default class HeadBtns extends Vue {
       } else if (type === 'reset') {
         this.scaleValue = value || 1;
       }
-
+      return this.scaleValue;
     }
     /**
      * 获取psd数据
@@ -113,15 +113,21 @@ export default class HeadBtns extends Vue {
   z-index: 3;
   padding: 2px 12px;
   height: 30px;
+  width:100%;
+  text-align: center;
   .button-item {
     display: inline-block;
     width: 60px;
+    line-height:30px;
     cursor: pointer;
     text-align: center;
-    vertical-align: bottom;
+    vertical-align: top;
     font-size: 14px;
     transition: color 0.28s, transform 0.28s;
     user-select: none;
+    &:first-child{
+      line-height:43px;
+    }
     &.scale-wrappper {
       width: 110px;
       margin-right: 10px;

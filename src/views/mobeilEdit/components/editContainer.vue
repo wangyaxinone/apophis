@@ -1,15 +1,15 @@
 <template>
     <div class="editContainer">
-        <div class="edit-box">
+        <div class="edit-box" :style="{transform:`scale(${scale})`}">
 
         </div>
     </div>
 </template>
 <script lang="ts">
-import {Vue, Component} from 'vue-property-decorator';
+import {Vue, Component, Prop} from 'vue-property-decorator';
 @Component
 export default class EditContainer extends Vue {
-
+    @Prop() public scale!: number;
 }
 </script>
 <style lang="scss" scoped>

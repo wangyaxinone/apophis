@@ -3,7 +3,7 @@
         <el-container>
             <el-header style="position:relative;z-index:2;">
                 <head-top>
-                    <headBtns></headBtns>
+                    <headBtns @update:scale="scale=$event" :scale="scale"></headBtns>
                 </head-top>
             </el-header>
             <el-container>
@@ -12,7 +12,7 @@
                 </el-aside>
                 <el-main style="padding:0px;display:flex;">
                     <componentsLib></componentsLib>
-                    <editContainer></editContainer>
+                    <editContainer  :scale="scale"></editContainer>
                     <settingMenu></settingMenu>
                 </el-main>
             </el-container>
@@ -38,7 +38,10 @@ import {HeadTop} from '@/components';
     }
 })
 export default class MobeilEdit extends Vue {
-
+    public scale: number = 1;
+    public updateScale(scale: any) {
+        console.log(scale);
+    }
 }
 </script>
 <style lang="scss" scoped>
