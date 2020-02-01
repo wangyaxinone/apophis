@@ -14,6 +14,9 @@ import {Vue, Component} from 'vue-property-decorator';
 @Component
 export default class SettingMenu extends Vue {
     protected activeName: string = 'first';
+    public handleClick() {
+        console.log(1);
+    }
 }
 </script>
 <style lang="scss" scoped>

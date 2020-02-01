@@ -7,7 +7,7 @@
             <slot></slot>
         </div>
         <el-dropdown  class="item"  @command="clickHandle">
-            <el-avatar class="avatar " size="medium " src="../assets/logo.png" style="cursor:pointer;"></el-avatar>
+            <el-avatar class="avatar "  src="../assets/logo.png" style="cursor:pointer;"></el-avatar>
             <el-dropdown-menu slot="dropdown">
                 <el-dropdown-item command="center">个人中心</el-dropdown-item>
                 <el-dropdown-item command="logout" divided>退出</el-dropdown-item>
